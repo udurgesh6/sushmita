@@ -1,12 +1,12 @@
+import Header from "./Header";
+import Navbar from "./Navbar";
 function App() {
-  const myName = () => {
-    console.log("Durgesh");
-  };
   return (
     <div>
-      <p>World</p>
-      <h1>Hello</h1>
-      <button onClick={myName}>Click</button>
+      <p>Hi I am App Component</p>
+      <p>I am rendering</p>
+      <Header />
+      <Navbar />
     </div>
   );
 }
