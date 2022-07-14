@@ -1,12 +1,27 @@
+import React, { useState } from "react";
 import Header from "./Header";
-import Navbar from "./Navbar";
 function App() {
+  // let name = "Durgesh";
+  // let age = 25;
+  const [age, setAge] = useState(25);
+  const [name, setName] = useState("Durgesh");
+  const incAge = () => {
+    setAge(age + 1);
+  };
+
+  const changeName = () => {
+    if (name === "Durgesh") {
+      setName("Ritesh");
+    } else {
+      setName("Durgesh");
+    }
+  };
+
   return (
     <div>
       <p>Hi I am App Component</p>
-      <p>I am rendering</p>
-      <Header />
-      <Navbar />
+      <button onClick={incAge}>Inc Age</button>
+      <Header name={name} age={age} place="Mumbai" change_name={changeName} />
     </div>
   );
 }
